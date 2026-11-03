@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    function saludar(nombre) {
+        return "Hola, " + nombre + "!";
+    }
+    console.log(saludar('Moris'));
+
+    const saludarFecha = (nombre) => "Hola, " + nombre + "!";
+    console.log(saludarFecha('Moris'));
+
+    const saludarLinea = (nombre) => "Hola, " + nombre + "!";
+    console.log(saludarLinea("Moris"));
+
+    const personas = [
+        { nombre: "Juan", edad: 25 },
+        { nombre: "Maria", edad: 17},
+        { nombre: "Carlos", edad: 30},
+        { nombre: "Laura", edad: 20},
+        { nombre: "Pedro", edad: 14},
+    ];
+
+
+    const calcularPromedioEdades = (personas) => {
+        let sumaEdades = 0;
+
+        for (let persona of personas) { 
+            sumaEdades += persona.edad;
+        }
+        return sumaEdades / personas.length;
+    };
+
+    
+    const promedioEdades = calcularPromedioEdades(personas);
+    console.log("El promedio de edades es:", promedioEdades);
+</script>
+
+</body>
+</html>
